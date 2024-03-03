@@ -1,0 +1,17 @@
+[
+{"key":"chars1","type":"notChanged","value":["a","b","c"]},
+{"key":"chars2","type":"changed","value":false,"valueOld":["d","e","f"]},
+{"key":"checked","type":"changed","value":true,"valueOld":false},
+{"key":"default","type":"changed","value":["value1","value2"],"valueOld":null},
+{"key":"id","type":"changed","value":null,"valueOld":45},
+{"key":"key1","type":"deleted","value":"value1"},
+{"key":"key2","type":"added","value":"value2"},
+{"key":"numbers1","type":"notChanged","value":[1,2,3,4]},
+{"key":"numbers2","type":"changed","value":[22,33,44,55],"valueOld":[2,3,4,5]},
+{"key":"numbers3","type":"deleted","value":[3,4,5]},
+{"key":"numbers4","type":"added","value":[4,5,6]},
+{"key":"obj1","type":"added","value":{"nestedKey":"value","isNested":true}},
+{"key":"setting1","type":"changed","value":"Another value","valueOld":"Some value"},
+{"key":"setting2","type":"changed","value":300,"valueOld":200},
+{"key":"setting3","type":"changed","value":"none","valueOld":true}
+]
