@@ -5,6 +5,8 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.Callable;
 
 @Command(name = "gendiff", mixinStandardHelpOptions = true, version = "differ 0.1",
@@ -22,8 +24,8 @@ class MyDiffer implements Callable<Integer> {
     @Override
     public Integer call() { // your business logic goes here...
         try {
-            String result = Differ.generate(filepath1, filepath2, format);
-            System.out.println(result);
+            List<Map<String, Object>> result = Differ.generate(filepath1, filepath2);
+            System.out.println(Formatter.format(result, format));
         } catch (Exception e) {
             System.out.println("Some went wrong");
         }

@@ -12,11 +12,11 @@ import java.util.Objects;
 import static hexlet.code.Parser.getData;
 
 public class Differ {
-    public static String generate(String file1, String file2, String formatName) throws IOException {
-        return Formatter.format(compytigDiff(getData(file1), getData(file2)), formatName);
+    public static List<Map<String, Object>> generate(String file1, String file2) throws IOException {
+        return computigDiff(getData(file1), getData(file2));
     }
 
-    private static List<Map<String, Object>> compytigDiff(Map<String, Object> map1, Map<String, Object> map2) {
+    private static List<Map<String, Object>> computigDiff(Map<String, Object> map1, Map<String, Object> map2) {
         TreeSet<String> keySet = new TreeSet<>();
         keySet.addAll(map1.keySet());
         keySet.addAll(map2.keySet());
