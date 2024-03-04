@@ -36,7 +36,7 @@ public class Plain {
                         .append("\n");
             }
         }
-        return builder.toString();
+        return builder.toString().trim();
     }
 
     private static Object checkingComplexValue(Object obj) {
