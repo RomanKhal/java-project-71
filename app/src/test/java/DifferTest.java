@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
 import hexlet.code.Differ;
-import hexlet.code.Formatter;
 import hexlet.code.Parser;
 import org.junit.jupiter.api.Test;
 
