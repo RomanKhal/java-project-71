@@ -17,7 +17,7 @@ public class Differ {
     }
 
     public static String generate(String file1, String file2, String formatName) throws IOException {
-        return Formatter.format(computigDiff(getData(file1), getData(file2), formatName));
+        return Formatter.format(computigDiff(getData(file1), getData(file2)), formatName);
     }
 
     private static List<Map<String, Object>> computigDiff(Map<String, Object> map1, Map<String, Object> map2) {
