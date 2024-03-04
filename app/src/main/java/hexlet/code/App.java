@@ -24,8 +24,8 @@ class MyDiffer implements Callable<Integer> {
     @Override
     public Integer call() { // your business logic goes here...
         try {
-            List<Map<String, Object>> result = Differ.generate(filepath1, filepath2);
-            System.out.println(Formatter.format(result, format));
+            String result = Differ.generate(filepath1, filepath2, format);
+            System.out.println(result);
         } catch (Exception e) {
             System.out.println("Some went wrong");
         }

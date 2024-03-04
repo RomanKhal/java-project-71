@@ -12,8 +12,12 @@ import java.util.Objects;
 import static hexlet.code.Parser.getData;
 
 public class Differ {
-    public static List<Map<String, Object>> generate(String file1, String file2) throws IOException {
-        return computigDiff(getData(file1), getData(file2));
+    public static String generate(String file1, String file2) throws IOException {
+        return generate(file1, file2, "stylish");
+    }
+
+    public static String generate(String file1, String file2, String formatName) throws IOException {
+        return Formatter.format(computigDiff(getData(file1), getData(file2), formatName));
     }
 
     private static List<Map<String, Object>> computigDiff(Map<String, Object> map1, Map<String, Object> map2) {
