@@ -25,7 +25,7 @@ public class Stylish {
                 builder.append(String.format(FORMAT, "+", innerMap.get("key"), innerMap.get("value")));
             }
         }
-        builder.insert(0, "{\n").append("}\n");
+        builder.insert(0, "{\n").append("}");
         return builder.toString();
     }
 }
