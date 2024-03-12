@@ -30,4 +30,4 @@ Property 'group2' was removed
 ![Actions Status](https://github.com/RomanKhal/java-project-71/actions/workflows/main.yml/badge.svg)
 <a href="https://codeclimate.com/github/RomanKhal/java-project-71/maintainability"><img src="https://api.codeclimate.com/v1/badges/8f8a1e2ea9d0355a7901/maintainability" /></a>
 <a href="https://codeclimate.com/github/RomanKhal/java-project-71/test_coverage"><img src="https://api.codeclimate.com/v1/badges/8f8a1e2ea9d0355a7901/test_coverage" /></a>
-![asciicast](https://asciinema.org/a/K9LNUiZCWlrKuQkULQcF5Xtun.svg)
+[![asciicast](https://asciinema.org/a/K9LNUiZCWlrKuQkULQcF5Xtun.svg)](https://asciinema.org/a/K9LNUiZCWlrKuQkULQcF5Xtun)
