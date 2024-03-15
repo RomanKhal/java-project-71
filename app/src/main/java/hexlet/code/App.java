@@ -23,14 +23,14 @@ public class App implements Callable<Integer> {
         try {
             String result = Differ.generate(filepath1, filepath2, format);
             System.out.println(result);
-        }catch (RuntimeException e) {
+        } catch (RuntimeException e) {
             System.out.println(e.getMessage());
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println("Some went wrong");
         }
         return 0;
     }
+
     public static void main(String[] args) {
         int exitCode = new CommandLine(new App()).execute(args);
         System.exit(exitCode);
