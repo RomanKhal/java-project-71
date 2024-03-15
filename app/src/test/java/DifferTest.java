@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
 import hexlet.code.Differ;
+import hexlet.code.Parser;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -80,13 +81,13 @@ public class DifferTest {
     public void testYamlParserOn() {
         String tsrc = "src/test/resources/fixtures/file1.yml";
         String expected = YAMLMapper.class.getSimpleName();
-        assertEquals(expected, Differ.getMapper(tsrc).getClass().getSimpleName());
+        assertEquals(expected, Parser.getMapper(tsrc).getClass().getSimpleName());
     }
 
     @Test
     public void testJsonParserOn() {
         String tsrc = "src/test/resources/file2.json";
         String expected = JsonMapper.class.getSimpleName();
-        assertEquals(expected, Differ.getMapper(tsrc).getClass().getSimpleName());
+        assertEquals(expected, Parser.getMapper(tsrc).getClass().getSimpleName());
     }
 }

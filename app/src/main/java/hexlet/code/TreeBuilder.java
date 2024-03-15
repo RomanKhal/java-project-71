@@ -8,7 +8,7 @@ import java.util.TreeMap;
 import java.util.Objects;
 public class TreeBuilder {
 
-    static List<Map<String, Object>> build(Map<String, Object> map1, Map<String, Object> map2) {
+    protected static List<Map<String, Object>> build(Map<String, Object> map1, Map<String, Object> map2) {
         TreeSet<String> keySet = new TreeSet<>();
         keySet.addAll(map1.keySet());
         keySet.addAll(map2.keySet());

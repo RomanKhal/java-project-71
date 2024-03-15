@@ -15,7 +15,7 @@ public class Formatter {
             case "stylish" -> Stylish.format(data);
             case "plain" -> Plain.format(data);
             case "json" -> Json.format(data);
-            default -> "Wrong format. Try stylish/plain";
+            default -> throw new RuntimeException("Wrong format. Try stylish/plain/json");
         };
     }
 }

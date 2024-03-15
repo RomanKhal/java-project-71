@@ -9,8 +9,7 @@ import java.util.concurrent.Callable;
 
 @Command(name = "gendiff", mixinStandardHelpOptions = true, version = "differ 0.1",
         description = "Compares two configuration files and shows a difference.")
-class MyDiffer implements Callable<Integer> {
-
+public class App implements Callable<Integer> {
     @Parameters(index = "0", description = "path to first file")
     private String filepath1;
     @Parameters(index = "1", description = "path to second file")
@@ -24,16 +23,16 @@ class MyDiffer implements Callable<Integer> {
         try {
             String result = Differ.generate(filepath1, filepath2, format);
             System.out.println(result);
-        } catch (Exception e) {
+        }catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+        }
+        catch (Exception e) {
             System.out.println("Some went wrong");
         }
         return 0;
     }
-}
-
-public class App {
     public static void main(String[] args) {
-        int exitCode = new CommandLine(new MyDiffer()).execute(args);
+        int exitCode = new CommandLine(new App()).execute(args);
         System.exit(exitCode);
     }
 }
